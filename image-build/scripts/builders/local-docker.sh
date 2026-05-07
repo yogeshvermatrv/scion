@@ -18,7 +18,8 @@
 # Implements the per-image builder contract on top of `docker buildx`.
 
 BUILDER_MODE="per-image"
-BUILDX_INSTANCE="scion-builder"
+#BUILDX_INSTANCE="scion-builder"
+BUILDX_INSTANCE="orbstack"
 
 builder_check() {
   if ! command -v docker >/dev/null 2>&1; then
@@ -89,7 +90,7 @@ builder_build() {
   done
 
   local arg
-  for arg in "${build_args[@]}"; do
+   for arg in "${build_args[@]+"${build_args[@]}"}"; do
     cmd+=(--build-arg "${arg}")
   done
 

@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # Scion Base Image - Adds sciontool and scion user on top of core-base
-ARG BASE_IMAGE
+ARG BASE_IMAGE=core-base:latest
 FROM ${BASE_IMAGE} AS base
 
 # Builder stage for sciontool compilation

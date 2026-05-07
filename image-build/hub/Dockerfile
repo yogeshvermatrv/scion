@@ -18,7 +18,7 @@
 # server subcommand (`scion server start`); this layer just sets the
 # default entrypoint and prepares hub-specific filesystem state.
 
-ARG BASE_IMAGE
+ARG BASE_IMAGE=scion-base:latest
 FROM ${BASE_IMAGE}
 
 USER root

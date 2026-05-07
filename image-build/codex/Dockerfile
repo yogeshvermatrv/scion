@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ARG BASE_IMAGE
+ARG BASE_IMAGE=scion-base:latest
 FROM ${BASE_IMAGE}
 
 ARG CODEX_CLI_VERSION=latest
